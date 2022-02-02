@@ -10,9 +10,10 @@ formMessageContainer.onkeyup = function(event){
     const numberOfCharsEntered = event.target.value.length;
     console.log(numberOfCharsEntered);
     charsCount.innerHTML = numberOfCharsEntered;
-    if(numberOfCharsEntered >= 5) {
-        submitBtn.disabled = false
-    } else {
-        submitBtn.disabled = true
-    }
+    // if(numberOfCharsEntered >= 5) {
+    //     submitBtn.disabled = false
+    // } else {
+    //     submitBtn.disabled = true
+    // }
+    submitBtn.disabled = numberOfCharsEntered <= 5;
 }
