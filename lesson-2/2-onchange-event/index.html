@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SetInterval</title>
+    <title>onchange-event</title>
     <script src="./js/script.js" defer></script>
+    <style>
+        .circles {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        .circle {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background: rgb(255, 200, 117);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 15px;
+
+        }
+        .dropdown {
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 5px;
+            text-transform: capitalize;
+            padding: 0 15px;
+        }
+    </style>
 </head>
 <body>
     <main>
+        <div class="container">
+            <select class="dropdown">
+                <option value="">select an option</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+            </select>
+        </div>
+        <ul class="circles">
+            <li class="circle"></li>
+        </ul>
     </main>
 </body>
 </html>

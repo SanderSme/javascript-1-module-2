@@ -58,9 +58,51 @@ theHoverBtn.addEventListener("mouseout", handleMouseOut); //Removes the class na
 //on mouse over show the data-animal
 const dataAnimal = document.querySelectorAll("li");
 for (let i = 0; i < dataAnimal.length; i++) {
-    dataAnimal[i].addEventListener("mouseover", hoverDataAnimal);
+  dataAnimal[i].addEventListener("mouseover", hoverDataAnimal);
 }
 
-function hoverDataAnimal(event){
-    console.log(event.target.dataset.animal);
+function hoverDataAnimal(event) {
+  console.log(event.target.dataset.animal);
 }
+
+//Question 7
+//switch case
+
+const animal = "cow";
+
+switch(animal) {
+  case "cat":
+    console.log("this is a cat");
+    break;
+  case "cow":
+    console.log("this is a cow");
+    break;
+  case "bird":
+    console.log("this is a bird");
+    break;
+  default:
+    console.log("cant find animal");
+}
+
+//Question 8: setinterval repeat
+
+const word = "Noroff";
+count = 1;
+function logMyWord(){
+  if(count === 5){
+    clearInterval(wordTimer)
+  }
+  console.log(count + " " + word);
+  count = count + 1;
+}
+
+let wordTimer = setInterval(logMyWord, 1000);
+
+//Question 9: play with setTimeout
+
+const containerDiv = document.querySelector(".container");
+
+function updateDivAfterTwoSeconds(){
+  containerDiv.innerHTML = "Hello i am updated";
+}
+setTimeout(updateDivAfterTwoSeconds, 2000);
